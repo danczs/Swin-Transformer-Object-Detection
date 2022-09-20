@@ -6,7 +6,7 @@ This repo contains the code of object detection for [Visformer](?). It is based 
 ## Object Detection on COCO
 The standard self-attention is not efficient for high-reolution inputs, 
 so we simply replace the standard self-attention with Swin attention for object detection. Therefore, Swin Transformer is our directly baseline. 
-###Mask R-CNN
+### Mask R-CNN
 | Backbone | sched | box mAP | mask mAP | params | FLOPs | FPS |
 | :---: | :---: |  :---: | :---: |  :---: |  :---: | :---: | 
 | Swin-T |1x| 42.6 | 39.3 | 48 | 267 | 14.8 |
@@ -15,7 +15,7 @@ so we simply replace the standard self-attention with Swin attention for object 
 |Swin-T |3x + MS|  46.0 | 41.6 | 48 | 367 | 14.8 |
 | VisformerV2-S | 3x + MS| 47.8 | 42.5 | 43 | 262 | 15.2 |
 
-###Cascade Mask R-CNN
+### Cascade Mask R-CNN
 | Backbone | sched | box mAP | mask mAP | params | FLOPs | FPS |
 | :---: | :---: |  :---: | :---: |  :---: |  :---: | :---: |
 | Swin-T |1x + MS|  48.1 | 41.7 | 86 | 745 | 9.5 |
