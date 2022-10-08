@@ -1,5 +1,5 @@
 dataset_type = 'CocoDataset'
-data_root = 'data/coco/'
+data_root = '/home/buaaldmc/czs/dataset/fast-ai-coco/'#data/coco/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -28,8 +28,8 @@ test_pipeline = [
         ])
 ]
 data = dict(
-    samples_per_gpu=2,
-    workers_per_gpu=2,
+    samples_per_gpu=2,#2
+    workers_per_gpu=2,#2
     train=dict(
         type=dataset_type,
         ann_file=data_root + 'annotations/instances_train2017.json',

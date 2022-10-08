@@ -81,4 +81,3 @@ optimizer_config = dict(
 ## Other Links
 
 > **Visformer for Classification**: See [Visformer for Image Classification](https://github.com/danczs/Visformer).
-

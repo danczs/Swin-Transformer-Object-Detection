@@ -1,18 +1,18 @@
 _base_ = [
-    '../_base_/models/mask_rcnn_swin_visformer_fpn.py',
+    '../_base_/models/mask_rcnn_swin_visformerv1_fpn.py',
     '../_base_/datasets/coco_instance.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 
 model = dict(
     backbone=dict(
-        embed_dim=256,
-        depth=[1, 10, 14, 3],
-        num_heads=[2, 4, 8, 16],
-        drop_path_rate=0.2,
+        embed_dim=384,
+        depth=[0, 7, 4, 4],
+        num_heads=[6, 6, 6, 6],
+        drop_path_rate=0.1,
         use_checkpoint=False
     ),
-    neck=dict(in_channels=[64, 128, 256, 512]))#unfixed
+    neck=dict(in_channels=[96, 192, 384, 768]))
 
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
